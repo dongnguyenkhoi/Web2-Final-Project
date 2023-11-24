@@ -29,22 +29,21 @@ if (isset($_GET['id'])) { // Retrieve quote to be edited, if id GET parameter is
 <?php if ($id): ?>
         <div class="container">
             <div class="w-50 p-3">
-            <h1 class="title-link"><?=$cars['title']?></h1>
-            <p>Posted at <?=$cars['datepost']?> <a class="card-link" href="edit.php?id=<?=$cars['id']?>">edit</a></p>
-            <?php if($cars['image']){ ?>
-                <img src="uploads/<?=$cars['image']?>" alt="">
-            <?php } else { ?>
-                <img class="card-img-top" src="images/no_image.png" />
-            <?php } ?>
-            
-            <p>Make: <?=$cars['make']?></p>
-            <p>Model: <?=$cars['model']?></p>
-            <p>Year: <?=$cars['year_made']?></p>
-            <p>Odometer: <?=$cars['odometer']?></p>
-            <p>Price: <?=$cars['price']?> $CAN</p>
-            <div id="description">Description: <?=$cars['description']?></div><br>
-            <?php else: ?>
-            <p>No car selected. <a href="?id=1">Try this link</a>.</p>
+                <h1 class="title-link"><?=$cars['title']?></h1>
+                <p>Posted at <?=$cars['datepost']?> <a class="card-link" href="edit.php?id=<?=$cars['id']?>">edit</a></p>
+                <?php if($cars['image']){ ?>
+                    <img src="uploads/<?=$cars['image']?>" alt="">
+                <?php } else { ?>
+                    <img class="card-img-top" src="images/no_image.png" />
+                <?php } ?>
+                <p>Make: <?=$cars['make']?></p>
+                <p>Model: <?=$cars['model']?></p>
+                <p>Year: <?=$cars['year_made']?></p>
+                <p>Odometer: <?=$cars['odometer']?></p>
+                <p>Price: <?=$cars['price']?> $CAN</p>
+                <div id="description">Description: <?=$cars['description']?></div><br>
+                <?php else: ?>
+                <p>No car selected. <a href="?id=1">Try this link</a>.</p>
             </div> 
         </div>
     <?php endif ?>
